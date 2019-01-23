@@ -21,7 +21,7 @@ public class GuestBookDao {
 		
 		try {
 			conn = getConnection();
-			String sql="select * from guestbook order by no";
+			String sql="select * from guestbook order by no desc";
 			pstmt=conn.prepareStatement(sql);
 			rs=pstmt.executeQuery();
 			while(rs.next())
