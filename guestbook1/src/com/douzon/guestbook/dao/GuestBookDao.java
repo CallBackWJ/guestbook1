@@ -30,6 +30,7 @@ public class GuestBookDao {
 				String name=rs.getString(2);
 				String password=rs.getString(3);
 				String message=rs.getString(4);
+				message=message.replace("\r\n", "<br>");
 				String date=new SimpleDateFormat("yyyy-MM-dd").format(rs.getDate(5));
 				
 				GuestBookVo vo=new GuestBookVo();
